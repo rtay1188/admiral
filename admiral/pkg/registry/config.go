@@ -33,6 +33,35 @@ func (config *IdentityConfigCluster) PutClientAssets(clientAssets []string) erro
 	return nil
 }
 
+func PutClusterGateway(cluster, name, url, notes, string, labels []string) error {
+	return nil
+	//sort labels?
+}
+
+func DeleteClusterGateway(cluster, name string) error {
+	return nil
+}
+
+func PutCustomData(cluster, namespace, key string, value interface{}) error {
+	return nil
+	// switch-case based on key (CCC/GTP/VS/OD/etc)
+	// traffic config?
+}
+
+func DeleteCustomData(cluster, namespace, key string) error {
+	return nil
+}
+
+func PutHostingData(cluster, namespace, key string, value interface{}) error {
+	return nil
+	// switch-case based on key (service/rollout/deployment)
+	// Where does sidecar and envoy filter go?
+}
+
+func DeleteHostingData(cluster, namespace, key string) error {
+	return nil
+}
+
 type RegistryServiceConfig struct {
 	Name   string            `json:"name"`
 	Weight int               `json:"weight"`
