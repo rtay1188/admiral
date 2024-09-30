@@ -36,6 +36,7 @@ func (config *IdentityConfigCluster) PutClientAssets(clientAssets []string) erro
 func PutClusterGateway(cluster, name, url, notes, string, labels []string) error {
 	return nil
 	//sort labels?
+	//preferably put this in service handler where we check if common.IsIstioIngressGatewayService(svc)
 }
 
 func DeleteClusterGateway(cluster, name string) error {
